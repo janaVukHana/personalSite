@@ -1,0 +1,298 @@
+html {
+  /* 4 smooth scroling */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  font-size: 6rem;
+  /* add border around text with little shadow */
+  text-shadow: 2px 0 15px #000, -2px 0 15px #000, 0 2px 15px #000,
+    0 -2px 15px #000, 1px 1px 15px #000, -1px -1px 15px #000, 1px -1px 15px #000,
+    -1px 1px 15px #000;
+}
+
+h1 span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  text-transform: capitalize;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+p {
+  line-height: 2;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  letter-spacing: 3px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.dark-section {
+  background-color: #393e46;
+  color: white;
+}
+
+.light-section {
+  background-color: white;
+  color: #393e46;
+}
+
+.dark-section,
+.light-section {
+  padding: 4rem 0;
+}
+
+.inner-container {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col {
+  flex: 1;
+}
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 0 !important;
+  opacity: 0.8;
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li a {
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+nav ul li a:hover {
+  color: white;
+  background-color: #393e46;
+}
+
+/* HEADER */
+header {
+  height: 100vh;
+  /* for parallax background*/
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../img/IMG_129.jpg');
+  min-height: 100%;
+}
+
+/* MAIN */
+
+/* ABOUT ME SECTION */
+#about-me p {
+  text-indent: 1rem;
+}
+
+/* WORK SECTION */
+
+#work .col {
+  opacity: 0.7;
+  /* margin: 0 auto; */
+}
+
+#work .col:hover {
+  opacity: 1;
+}
+
+#work img {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: auto;
+  aspect-ratio: 3/2;
+}
+
+#work figcaption {
+  text-align: center;
+  font-weight: 700;
+}
+
+#work span {
+  padding: 0 1rem;
+  opacity: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  vertical-align: middle;
+  transition: 1s opacity;
+}
+
+#work .col:hover span {
+  opacity: 1;
+}
+
+/* MY SKILLS SECTION */
+#my-skills {
+  text-align: center;
+}
+
+#my-skills .other-skills {
+  margin-top: 3rem;
+}
+
+#my-skills .other-skills ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+/* CONTACT SECTION */
+
+#contact h2 {
+  margin-bottom: 1rem;
+}
+
+#contact p {
+  margin-bottom: 0.3rem;
+}
+
+/* right margin on icon */
+#contact svg {
+  margin-right: 1rem;
+}
+
+/* FOOTER SECTION */
+footer {
+  padding: 2rem !important;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+footer ul li {
+  margin: 0 1rem;
+  opacity: 0.6;
+}
+
+footer ul li:hover {
+  opacity: 1;
+}
+
+footer p {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/* @media */
+
+/* CHEETSHEET */
+
+/* Extra small devices :: phones :: 600px and down */
+/* Small :: portrait tablets and large phones :: 600px and up */
+/* Medium :: landscape tablets :: 768px and up */
+/* Large :: laptops/desktops :: 992px and up */
+/* Extra large :: laptops/desktops :: 1200px and up */
+
+/* medium screens  */
+@media only screen and (max-width: 992px) {
+  .inner-container {
+    width: 90%;
+  }
+}
+
+/* small screens */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  #work .row {
+    flex-direction: column;
+  }
+
+  #work .col {
+    margin-bottom: 1rem;
+  }
+}
+
+/* extra small screens  */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+
+  h1 {
+    width: 100%;
+  }
+
+  nav ul li {
+    flex: 1 1;
+  }
+
+  nav ul li a {
+    padding: 0.3rem 0.7rem;
+  }
+}
+
+/* javascrip add class to nav links dinamically */
+.active {
+  color: white;
+  background-color: #393e46;
+}
