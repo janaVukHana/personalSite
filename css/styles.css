@@ -97,11 +97,12 @@ button:hover {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .col {
-  flex: 1;
+  width: 33%;
 }
 
 /* NAVIGATION */
@@ -150,6 +151,9 @@ header {
 }
 
 /* WORK SECTION */
+#work .inner-container {
+  width: 90%;
+}
 
 #work .col {
   opacity: 0.7;
@@ -188,6 +192,10 @@ header {
 /* MY SKILLS SECTION */
 #my-skills {
   text-align: center;
+}
+
+#my-skills .row {
+  flex-wrap: nowrap;
 }
 
 #my-skills .other-skills {
@@ -265,11 +273,13 @@ footer p {
 
   #work .row {
     flex-direction: column;
+    text-align: center;
   }
 
   #work .col {
     margin: 0 auto;
     margin-bottom: 1rem;
+    width: 100%;
   }
 }
 
